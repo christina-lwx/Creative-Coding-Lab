@@ -36,7 +36,7 @@ class alienDancer {
   constructor(startX, startY) {
     this.x = startX;
     this.y = startY;
-    this.scaleFactor = 0.5; // This could be used to scale the dancer if needed
+    this.scaleFactor = 0.5; 
     this.bodyColor = [220, 210, 140];
     this.strokeColor = [250, 220, 240];
     this.eyeColor = [220, 210, 120];
@@ -57,21 +57,6 @@ class alienDancer {
   update() {
     // update properties here to achieve
     // your dancer's desired moves and behaviour
-    // this.x += sin(this.angle) * 2; 
-    // this.y=lerp(this.y,1,0.01)
-     
-    // this.targetX = mouseX;
-    // this.targetY = mouseY;
- 
-    // this.x = lerp(this.x, this.targetX, this.easing);
-    // this.y = lerp(this.y, this.targetY, this.easing);
-    // this.targetX = mouseX;
-    // this.targetY = mouseY;
-
-    // this.x = lerp(this.x, this.targetX + this.swingWidth, this.easing);
-    // this.y = lerp(this.y, this.targetY + this.bounceHeight, this.easing);
-
-    // 更新弹跳和摆动的偏移量
     this.angle += this.bounceSpeed;
     this.angle=this.angle%100;
 
@@ -90,12 +75,12 @@ class alienDancer {
 
 
 
-    scale(this.scaleFactor); // Apply scaling to make the dancer larger or smaller
+    scale(this.scaleFactor); 
 
     // Body
     noStroke();
     fill(this.bodyColor);
-    ellipse(0, 0+this.bounceHeight, 70, 200); // Adjusted to use 0,0 as the center
+    ellipse(0, 0+this.bounceHeight, 70, 200); 
 
     // Arms
     push();
@@ -125,7 +110,7 @@ class alienDancer {
     fill(this.mouthColor);
     rect(-25, -110+this.bounceHeight, 50, 10, 10);
 
-    // Legs (simplified to not use pmouseX, pmouseY)
+    // Legs  
     noFill();
     stroke(this.strokeColor);
     strokeWeight(10);
